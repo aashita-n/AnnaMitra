@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Questrial", sans-serif;
+    background-color: #f8fbe9;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+    padding: 10px;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  .navbar img {
+    max-width: 70px; /* Increase image size */
+    height: auto;
+    margin-right: 10px; /* Adjust right margin */
+    cursor: pointer; /* Add cursor pointer */
+  }
+
+  .navbar .icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .navbar-text {
+    text-align: left; /* Align text to the left */
+    margin-left: 10px; /* Add left margin for spacing */
+  }
+
+  .divider {
+    width: 100%;
+    flex: 1; /* Let the divider take up remaining space */
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 0.5px; /* Adjusted top margin */
+  }
+
+  /* Sidebar menu */
+  .sidebar {
+    position: fixed;
+    right: -250px; /* Initially hide the sidebar off the screen */
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
+    z-index: 1;
+  }
+
+  .sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidebar a:hover {
+    background-color: #ddd;
+  }
+
+  .main-content {
+    margin-right: 250px; /* Adjust main content margin */
+    padding: 20px;
+  }
+
+  /* Centered rectangle with rounded corners */
+  .centered-rectangle {
+    width: 80%; /* Adjusted width */
+    height: 60vh; /* Half of the viewport height */
+    background-color: #cfe291; /* Rectangle color */
+    border-radius: 20px; /* Rounded corners */
+    position: absolute;
+    top: 25%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+  
+    display: flex;
+    justify-content: center; /* Center the child elements horizontally */
+    align-items: center; /* Center the child elements vertically */
+  }
+
+  .vertical-rectangle {
+    width: 20%; /* Adjusted width */
+    height: 50%; /* Full height of the parent div */
+    background-color: white; /* Rectangle color */
+    border-radius: 20px; /* Rounded corners */
+    margin: 0 80px 90px;
+    position: relative;
+  }
+
+  .circle {
+    width: 50%;
+    height: 50%;
+    background-color: #f6f8e7;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+  }

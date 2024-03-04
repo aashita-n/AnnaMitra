@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css /dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-text">
+          <p
+            style="
+              font-size: 23px;
+              line-height: 0.5px;
+              color: #354e41;
+              font-weight: 550;
+              margin-bottom: 20px;
+            "
+          >
+            Hello, Aashita!
+          </p>
+          <p style="font-size: 16px; margin-bottom: -5px">
+            <i class="fa fa-map-marker"></i> Bengaluru, India
+          </p>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <img
+            src="images/batman_hero_avatar_comics-512-2.webp"
+            alt="Profile Picture"
+            onclick="toggleSidebar()"
+          />
+          <i
+            class="fa fa-bars icon"
+            onclick="toggleSidebar()"
+            style="font-size: 30px; color: #34644b; margin-right: 10px"
+          ></i>
+        </div>
+      </div>
+      <hr class="divider" />
+    </div>
+    <div class="sidebar" id="sidebar">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Blog</a>
+    </div>
+    <div class="main-content">
+      <!-- Replace this with the centered rectangle -->
+      <div class="centered-rectangle">
+        <div class="vertical-rectangle">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="vertical-rectangle">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        if (sidebar.style.right === "0px") {
+          sidebar.style.right = "-250px";
+        } else {
+          sidebar.style.right = "0px";
+        }
+      }
+
+      // Close sidebar when clicking elsewhere on the page
+      document.body.addEventListener("click", function (event) {
+        var sidebar = document.getElementById("sidebar");
+        var dropdown = document.getElementById("dropdown");
+        if (
+          !sidebar.contains(event.target) &&
+          !dropdown.contains(event.target)
+        ) {
+          sidebar.style.right = "-250px";
+        }
+      });
+    </script>
+  </body>
+</html>
